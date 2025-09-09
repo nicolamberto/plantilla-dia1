@@ -8,17 +8,29 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   const panel = {
-    open: { height: "auto", opacity: 1, y: 0 },
-    closed: { height: 0, opacity: 0, y: -8 },
+    open: {
+      height: "auto",
+      opacity: 1,
+      // paddingY en abierto
+      paddingTop: 0,  // py-5 = 20px
+      paddingBottom: 0,
+    },
+    closed: {
+      height: 0,
+      opacity: 0,
+      // sin padding en cerrado
+      paddingTop: 0,
+      paddingBottom: 0,
+    },
   };
 
   const ease = [0.22, 1, 0.36, 1]; // easeOutCubic-ish
 
   return (
-    <header className="fixed inset-x-0 top-0 z-40 bg-white/80 backdrop-blur border-b border-neutral-200 h-[80px] flex items-center">
+    <header className="fixed inset-x-0 top-0 z-40 bg-white/80 backdrop-blur border-b border-neutral-200 md:h-[80px] flex items-center">
       <nav className="container mx-auto px-4 w-full relative">
         <div className="flex items-center justify-between h-14">
-          <a href="#hero" className="font-semibold tracking-tight">
+          <a href="#hero" className="font-semibold tracking-tight text-2xl">
             {navbar.logoAlt}
           </a>
 
@@ -39,12 +51,11 @@ export default function Navbar() {
         <AnimatePresence initial={false}>
           {open && (
             <>
-              {/* Backdrop bajo el header (solo mobile) */}
               <motion.button
                 type="button"
                 aria-label="Cerrar menú"
                 onClick={() => setOpen(false)}
-                className="md:hidden fixed inset-0 top-[80px] bg-black/20 "
+                className="md:hidden fixed inset-x-0 top-14 md:top-20 bg-black/20" // <- alto real del header
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
@@ -55,20 +66,21 @@ export default function Navbar() {
               <motion.div
                 key="mobile-panel"
                 className="
-                  md:hidden absolute inset-x-0 top-full overflow-hidden
-                  bg-white/95 backdrop-blur border-t border-neutral-200 shadow-lg py-5 px-2
-                "
+                          md:hidden absolute inset-x-0 top-full overflow-hidden
+                        bg-white/95 backdrop-blur border-t border-neutral-200 shadow-lg px-2
+                          "
+                // Ojo: quitamos py-* fijos del className y los animamos vía variants
                 initial="closed"
                 animate="open"
                 exit="closed"
                 variants={panel}
                 transition={{
-                  height: { duration: 0.22, ease },
-                  opacity: { duration: 0.18, ease },
-                  y: { duration: 0.22, ease },
+                  height: { duration: 0.4, ease },
+                  opacity: { duration: 0.3, ease },
+                  // y: fuera
                 }}
               >
-                <ul className="px-4 py-2 flex flex-col">
+                <ul className="px-4 py-5 flex flex-col">
                   {navbar.links.map((l) => (
                     <li key={l.href}>
                       <a

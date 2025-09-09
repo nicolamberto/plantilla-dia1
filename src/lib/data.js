@@ -6,7 +6,7 @@ export const site = {
 };
 
 export const navbar = {
-  logoAlt: "DIMITRI",
+  logoAlt: "LOGO",
   links: [
     { label: "Inicio", href: "#hero" },
     { label: "Nosotros", href: "#about" },

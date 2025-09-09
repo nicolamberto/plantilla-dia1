@@ -7,7 +7,9 @@ import Image from "next/image";
 // - Desktop (fillParent=true): llena el alto del padre (h-full)
 function ImgCard({ title, image, fillParent = false, className = "" }) {
   return (
-    <div className={`relative group rounded-xl overflow-hidden ${fillParent ? "h-full" : ""} ${className}`}>
+    <div className={`relative group rounded-xl overflow-hidden
+        ${fillParent ? "aspect-[16/9] md:aspect-auto md:h-full" : ""}
+        ${className}`}>
       {image ? (
         fillParent ? (
           // Llenar alto del contenedor (desktop)

@@ -6,7 +6,7 @@ export default function ContactInfo() {
     <Section id="contact" className="bg-neutral-50">
       <div className="grid md:grid-cols-2 gap-6 items-start w-full">
         {/* Columna izquierda: datos */}
-        <div className="rounded-xl bg-white/70 border border-neutral-200 p-6">
+        <div className="rounded-xl bg-white/70 border border-neutral-200 p-2 md:p-6">
           <h2 className="text-2xl md:text-3xl font-semibold mb-4">
             {contactInfo.title || "Contacto"}
           </h2>
@@ -35,7 +35,7 @@ export default function ContactInfo() {
         </div>
 
         {/* Columna derecha: mapa */}
-        <div className="rounded-xl  border border-neutral-200 h-full">
+        <div className="rounded-xl  border border-neutral-200 h-full overflow-hidden">
           <iframe
             title="Mapa - Buenos Aires"
             src="https://www.google.com/maps?q=-32.42140804384866,-63.21606088790512&z=15&output=embed"

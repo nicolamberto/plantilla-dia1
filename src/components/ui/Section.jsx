@@ -9,7 +9,7 @@ export default function Section({ id, className = "", children, style, ...props 
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.6 }}
-        className="container mx-auto px-2 md:px-4"
+        className="container mx-auto px-5 md:px-4"
       >
         {children}
       </motion.div>
