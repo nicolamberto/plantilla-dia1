@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # DIMITRI – Landing Page
 
 Landing page moderna y responsive desarrollada en **Next.js 13**, **Tailwind CSS** y **Framer Motion**, diseñada para el proyecto *DIMITRI*, especialistas en cielorrasos.
@@ -32,3 +33,4 @@ git clone https://github.com/tu-usuario/dimitri.git
 cd dimitri
 npm install
 npm run dev
+=======
