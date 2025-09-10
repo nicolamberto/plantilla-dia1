@@ -1,7 +1,7 @@
 'use client'
 
 import Section from "@/components/ui/Section";
-import { faqs } from "@/lib/data";
+import { faqs, schema } from "@/lib/data";
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
@@ -9,6 +9,7 @@ import { useState } from "react";
 import { IoMdArrowDropup } from "react-icons/io";
 
 export default function FAQs() {
+  const faqLd = schema.faq(faqs);
 
   const [activeQuestion, setActiveQuestion] = useState(null);
 
@@ -55,6 +56,10 @@ export default function FAQs() {
 
         </div>
       </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
     </Section>
   );
 }

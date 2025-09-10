@@ -1,11 +1,14 @@
 import Section from "@/components/ui/Section";
 import { works } from "@/lib/data";
 import Image from "next/image";
+import { works } from "@/lib/data";
+import { schema } from "@/lib/data";
 
 // Card con overlay y dos modos:
 // - Mobile: mantiene aspecto 16/9
 // - Desktop (fillParent=true): llena el alto del padre (h-full)
 function ImgCard({ title, image, fillParent = false, className = "" }) {
+
   return (
     <div className={`relative group rounded-xl overflow-hidden
         ${fillParent ? "aspect-[16/9] md:aspect-auto md:h-full" : ""}
@@ -60,6 +63,8 @@ function ImgCard({ title, image, fillParent = false, className = "" }) {
 }
 
 export default function Works() {
+  const itemList = schema.itemListWorks(works);
+
   return (
     <Section id="works">
       <div className="space-y-6">
@@ -104,6 +109,11 @@ export default function Works() {
           </a>
         </div>
       </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }}
+      />
+
     </Section>
   );
 }

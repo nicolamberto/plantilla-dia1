@@ -45,12 +45,29 @@ export const about = {
 export const whyUs = {
   title: "¿Por qué elegirnos?",
   items: [
-    { title: "Rapidez", desc: "", image: '/images/whyus/rapidezwhy.webp' },
-    { title: "Resistencia", desc: "", image: '/images/whyus/resistenciawhy.webp' },
-    { title: "Presupuesto personalizado", desc: "", image: '/images/whyus/presupuestowhy.webp' },
-    { title: "Instalación", desc: "", image: '/images/whyus/instalacionwhy.webp' },
+    {
+      title: "Rapidez",
+      desc: "Agendamos tu visita en 24 h y entregamos presupuesto sin vueltas.",
+      image: "/images/whyus/rapidezwhy.webp",
+    },
+    {
+      title: "Resistencia",
+      desc: "Materiales certificados y terminaciones que soportan el uso diario.",
+      image: "/images/whyus/resistenciawhy.webp",
+    },
+    {
+      title: "Presupuesto personalizado",
+      desc: "Te proponemos la mejor opción según tu espacio y tu inversión.",
+      image: "/images/whyus/presupuestowhy.webp",
+    },
+    {
+      title: "Instalación",
+      desc: "Equipo propio, obra limpia y fechas claras de inicio y fin.",
+      image: "/images/whyus/instalacionwhy.webp",
+    },
   ],
 };
+
 
 export const works = {
   title: "Nuestros trabajos",
@@ -146,5 +163,232 @@ export const contactForm = {
 };
 
 export const footer = {
-  smallprint: "© DIMITRI. Todos los derechos reservados.",
+  smallprint: "© TuMarca. Todos los derechos reservados.",
+};
+
+
+export const socials = [
+  { type: "instagram", label: "Instagram", href: "https://instagram.com/tu_cuenta" },
+  { type: "facebook",  label: "Facebook",  href: "https://facebook.com/tu_cuenta" },
+  { type: "linkedin",  label: "LinkedIn",  href: "https://linkedin.com/company/tu_cuenta" },
+  { type: "youtube",   label: "YouTube",   href: "https://youtube.com/@tu_cuenta" },
+];
+
+
+// ===================
+// SEO SITE-WIDE (HEAD)
+// ===================
+export const seo = {
+  siteUrl: "https://plantilla-1-gray.vercel.app/",             // cámbialo
+  defaultTitle: "DIMITRI — Cielorrasos en Barcelona",
+  titleTemplate: "%s | DIMITRI",
+  description:
+    "Instalación de cielorrasos modernos y resistentes en Barcelona. Visita técnica sin costo y presupuesto exacto en menos de 24h.",
+  keywords: [
+    "cielorrasos", "cielorraso Barcelona", "instalación cielorrasos",
+    "techos falsos", "obras residenciales", "obras comerciales"
+  ],
+  locale: "es_ES",
+  themeColor: "#ffffff",
+  openGraph: {
+    type: "website",
+    url: "https://tudominio.com",
+    title: "DIMITRI — Cielorrasos de calidad que transforman tus espacios",
+    description:
+      "Especialistas en cielorrasos: rapidez, precisión y obra limpia. Reserva tu visita técnica sin costo.",
+    siteName: "DIMITRI",
+    images: [
+      {
+        url: "https://tudominio.com/og/og-default.jpg",
+        width: 1200,
+        height: 630,
+        alt: "DIMITRI — Cielorrasos",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@tu_usuario",    // opcional
+    creator: "@tu_usuario", // opcional
+  },
+  alternates: {
+    canonical: "https://tudominio.com",
+    languages: { "es-ES": "https://tudominio.com" },
+  },
+};
+
+// ===================
+// ORGANIZATION / LOCAL
+// ===================
+export const business = {
+  name: "DIMITRI",
+  legalName: "DIMITRI Reformas S.L.",
+  url: "https://tudominio.com",
+  logo: "https://tudominio.com/og/logo.png",
+  phone: "+34 600 000 000",
+  email: "contacto@dimitri.com",
+  address: {
+    streetAddress: "Carrer Ejemplo 123",
+    addressLocality: "Barcelona",
+    postalCode: "08001",
+    addressCountry: "ES",
+  },
+  areaServed: ["Barcelona", "Cataluña"],
+  sameAs: [
+    "https://instagram.com/tu_cuenta",
+    "https://www.facebook.com/tu_cuenta",
+    "https://www.linkedin.com/company/tu_cuenta",
+    "https://www.youtube.com/@tu_cuenta",
+  ],
+  rating: { value: 4.9, count: 120 }, // ajusta si tienes datos reales
+};
+
+// ===================
+// SECTION METADATA + SCHEMA
+// ===================
+export const sectionMeta = {
+  layout: {
+    title: "DIMITRI — Cielorrasos en Barcelona",
+    description:
+      "Cielorrasos a medida con visita técnica gratuita y presupuestos sin sorpresas.",
+  },
+  hero: {
+    title: "Cielorrasos de calidad que transforman tus espacios",
+    description:
+      "Instalamos cielorrasos modernos y resistentes. Agenda tu visita técnica sin costo.",
+    ogImage: "https://tudominio.com/og/hero.jpg",
+  },
+  about: {
+    title: "Sobre nosotros",
+    description:
+      "Años de experiencia en obras residenciales y comerciales. Atención cercana y obra limpia.",
+  },
+  whyUs: {
+    title: "¿Por qué elegirnos?",
+    description:
+      "Rapidez, materiales resistentes, presupuesto personalizado e instalación profesional.",
+  },
+  works: {
+    title: "Nuestros trabajos",
+    description:
+      "Galería de proyectos reales en hogares y empresas con distintos materiales y terminaciones.",
+  },
+  clients: {
+    title: "Reseñas de clientes",
+    description:
+      "Opiniones reales sobre nuestra atención, plazos de obra y acabados.",
+  },
+  faqs: {
+    title: "Preguntas frecuentes",
+    description:
+      "Resolvemos dudas sobre zonas de trabajo, plazos de instalación y materiales.",
+  },
+  contactInfo: {
+    title: "Contacto",
+    description:
+      "Reserva tu visita técnica y recibe presupuesto en menos de 24h.",
+  },
+  contactForm: {
+    title: "Reservá tu visita técnica",
+    description:
+      "Deja tus datos para coordinar una visita sin costo y un presupuesto exacto.",
+  },
+  footer: {
+    title: "Información legal y enlaces",
+    description: "FAQs, contacto y redes sociales.",
+  },
+};
+
+// ===================
+// JSON-LD HELPERS POR SECCIÓN
+// ===================
+export const schema = {
+  organization(biz = business) {
+    return {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: biz.name,
+      legalName: biz.legalName,
+      url: biz.url,
+      logo: biz.logo,
+      sameAs: biz.sameAs,
+      contactPoint: [{
+        "@type": "ContactPoint",
+        telephone: biz.phone,
+        contactType: "customer service",
+        email: biz.email,
+        areaServed: biz.areaServed,
+        availableLanguage: ["es"],
+      }],
+    };
+  },
+  localBusiness(biz = business) {
+    // Usa el subtipo más específico si aplica: "HomeAndConstructionBusiness", "Contractor", etc.
+    return {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      name: biz.name,
+      image: [seo.openGraph.images?.[0]?.url],
+      url: biz.url,
+      telephone: biz.phone,
+      address: {
+        "@type": "PostalAddress",
+        ...biz.address,
+      },
+      areaServed: biz.areaServed,
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: String(biz.rating.value),
+        reviewCount: String(biz.rating.count),
+      },
+    };
+  },
+  itemListWorks(works) {
+    return {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: "Galería de proyectos",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: works.featured.title },
+        ...works.items.map((w, i) => ({
+          "@type": "ListItem",
+          position: i + 2,
+          name: w.title,
+        })),
+      ],
+    };
+  },
+  reviews(testimonials, biz = business) {
+    return {
+      "@context": "https://schema.org",
+      "@type": "Product", // o Service si prefieres
+      name: `${biz.name} — Cielorrasos`,
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: String(biz.rating.value),
+        reviewCount: String(biz.rating.count),
+      },
+      review: testimonials.map((t) => ({
+        "@type": "Review",
+        author: { "@type": "Person", name: t.author },
+        reviewBody: t.quote,
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: "5",
+          bestRating: "5",
+        },
+      })),
+    };
+  },
+  faq(faqs) {
+    return {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqs.items.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    };
+  },
 };

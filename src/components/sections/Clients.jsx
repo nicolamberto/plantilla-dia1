@@ -3,9 +3,11 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Section from "@/components/ui/Section";
-import { clients } from "@/lib/data";
+import { clients, schema } from "@/lib/data";
 
 export default function Clients() {
+  const reviews = schema.reviews(clients.testimonials);
+
   const trackRef = useRef(null);
   const firstRef = useRef(null);
   const secondRef = useRef(null);
@@ -192,6 +194,10 @@ export default function Clients() {
           </div>
         )}
       </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviews) }}
+      />
     </Section>
   );
 }

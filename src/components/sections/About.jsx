@@ -1,8 +1,12 @@
 import Section from "@/components/ui/Section";
 import { about } from "@/lib/data";
 import Image from "next/image";
+import { business, schema } from "@/lib/data";
 
 export default function About() {
+  const org = schema.organization(business);
+  const loc = schema.localBusiness(business);
+
   return (
     <Section id="about">
       <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -45,6 +49,14 @@ export default function About() {
           </div>
         </div>
       </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(org) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(loc) }}
+      />
     </Section>
   );
 }
