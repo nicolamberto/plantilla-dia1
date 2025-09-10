@@ -1,8 +1,6 @@
 import Section from "@/components/ui/Section";
-import { works } from "@/lib/data";
+import { works, schema } from "@/lib/data";
 import Image from "next/image";
-import { works } from "@/lib/data";
-import { schema } from "@/lib/data";
 
 // Card con overlay y dos modos:
 // - Mobile: mantiene aspecto 16/9
