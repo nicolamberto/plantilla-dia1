@@ -21,7 +21,7 @@ export const navbar = {
 export const hero = {
   eyebrow: "",
   titleLine1: "Cielorrasos de calidad",
-  titleLine2: "que transforman tus ",
+  titleLine2: "que transforman tus",
   word: 'espacios',
   desc1: "Instalamos cielorrasos modernos, resistentes y a medida.",
   desc2: "Con una visita técnica te damos un presupuesto exacto y sin sorpresas.",
@@ -163,7 +163,7 @@ export const contactForm = {
 };
 
 export const footer = {
-  smallprint: "© TuMarca. Todos los derechos reservados.",
+  smallprint: "© Desarrollado por We Nima. Todos los derechos reservados.",
 };
 
 
