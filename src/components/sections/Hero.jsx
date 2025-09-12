@@ -1,33 +1,70 @@
+"use client";
 import Section from "@/components/ui/Section";
 import { hero } from "@/lib/data";
-
+import Image from "next/image";
 
 export default function Hero() {
   return (
     <Section
       id="hero"
-      className="pt-8 md:pt-16 h-[95vh] lg:h-[100vh] flex justify-center items-center"
-      style={{ backgroundImage: "url('/images/hero/herobanner.webp')" }}
+      // svh/dvh: alturas estables en mobile; overflow hidden evita parpadeos
+      className="relative min-h-[100svh] md:min-h-[100dvh] flex items-center justify-center overflow-hidden"
     >
-      <div className="flex justify-center items-center gap-8 ">
-        <div className="space-y-4 flex flex-col justify-center items-center gap-7 max-w-[850px] ">
+      {/* Fondo desktop */}
+      <div className="absolute inset-0 hidden md:block -z-10">
+        <Image
+          src={hero.imageDesktop}
+          alt=""
+          fill
+          priority
+          sizes="(min-width: 768px) 100vw"
+          className="object-cover"
+        />
+      </div>
+
+      {/* Fondo mobile */}
+      <div className="absolute inset-0 md:hidden -z-10">
+        <Image
+          src={hero.imageMobile}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+      </div>
+
+      {/* Overlay para contraste */}
+      <div
+        className="
+          absolute inset-0 -z-10
+          bg-black/10
+          md:bg-gradient-to-b md:from-black/45 md:to-black/15
+          pointer-events-none
+        "
+      />
+
+      {/* Contenido */}
+      <div className="relative z-10 container mx-auto px-4">
+        <div className="mx-auto max-w-[850px] flex flex-col items-center gap-7 text-center">
           {hero.eyebrow ? (
-            <p className="text-xs uppercase tracking-widest text-neutral-500">
+            <p className="text-xs uppercase tracking-widest text-white/80">
               {hero.eyebrow}
             </p>
           ) : null}
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold leading-tight text-center text-white">
+          <h1 className="text-[27px] w-full sm:text-4xl md:text-5xl xl:text-6xl font-hero leading-tight text-white">
             <span>{hero.titleLine1}</span>
             <br />
-            <span className="">{hero.titleLine2} <span className="text-[#90ea93]">{hero.word}</span></span>
+            <span>
+              {hero.titleLine2} <span className="text-[#90ea93]">{hero.word}</span>
+            </span>
           </h1>
 
-          <div className="text-center text-white/70">
-            <p className="">{hero.desc1}</p>
-            <p className="">{hero.desc2}</p>
+          <div className="text-white/80 space-y-1 text-[14px]">
+            <p>{hero.desc1}</p>
+            <p>{hero.desc2}</p>
           </div>
-
 
           <div className="pt-2">
             <a
@@ -38,8 +75,6 @@ export default function Hero() {
             </a>
           </div>
         </div>
-
-        {/* Placeholder de imagen */}
       </div>
     </Section>
   );

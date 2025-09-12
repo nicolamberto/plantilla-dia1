@@ -8,3 +8,43 @@
 .scrollbar-hide::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
 }
+
+
+@font-face {
+  font-family: "PoppinsLight";
+  src: url("/fonts/Poppins-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PoppinsMedium";
+  src: url("/fonts/Poppins-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PoppinsSemiBold";
+  src: url("/fonts/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Body: texto general con Light */
+body {
+  font-family: "PoppinsLight", sans-serif;
+}
+
+/* Clase para el H1 del hero */
+.font-hero {
+  font-family: "PoppinsMedium", sans-serif;
+}
+
+/* Clase para títulos de secciones */
+.font-section-title {
+  font-family: "PoppinsSemiBold", sans-serif;
+}

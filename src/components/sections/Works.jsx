@@ -66,7 +66,7 @@ export default function Works() {
   return (
     <Section id="works">
       <div className="space-y-6">
-        <h2 className="text-4xl sm:text-5xl md:text-3xl xl:text-5xl font-bold">{works.title}</h2>
+        <h2 className="text-4xl sm:text-5xl md:text-3xl xl:text-5xl font-section-title">{works.title}</h2>
 
         {/* Fila 1: texto (1/2) + trabajo estrella (1/2)
             items-stretch = ambas columnas igual altura en md+ */}

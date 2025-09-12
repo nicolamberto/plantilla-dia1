@@ -6,7 +6,7 @@ export const site = {
 };
 
 export const navbar = {
-  logoAlt: "LOGO",
+  logoAlt: "DIMITRI",
   links: [
     { label: "Inicio", href: "#hero" },
     { label: "Nosotros", href: "#about" },
@@ -22,11 +22,12 @@ export const hero = {
   eyebrow: "",
   titleLine1: "Cielorrasos de calidad",
   titleLine2: "que transforman tus",
-  word: 'espacios',
+  word: "espacios",
   desc1: "Instalamos cielorrasos modernos, resistentes y a medida.",
   desc2: "Con una visita técnica te damos un presupuesto exacto y sin sorpresas.",
   ctaPrimary: { label: "AGENDÁ TU VISITA HOY", href: "#contact" },
-  imagePlaceholder: true, // hay imagen en el diseño desktop
+  imageDesktop: "/images/hero/herobanner.webp",
+  imageMobile: "/images/hero/banner-mobile.webp",
 };
 
 export const about = {
@@ -73,12 +74,12 @@ export const works = {
   title: "Nuestros trabajos",
   subtitle: "Cada proyecto que realizamos es distinto, porque cada espacio tiene sus propias necesidades. En esta galería vas a encontrar ejemplos reales de cielorrasos instalados tanto en hogares como en empresas, mostrando la variedad de estilos, materiales y terminaciones que podemos lograr.",
   subtitle2: "Nos enfocamos en que cada instalación no solo sea estéticamente atractiva, sino también funcional, resistente y adaptada al uso del lugar.",
-  featured: { title: "Trabajo destacado", image: "/images/works/work1.webp" },
+  featured: { title: "Cielorraso Acústico Azul – Estilo Moderno", image: "/images/works/work1.webp" },
   items: [
-    { title: "Trabajo 2", image: "/images/works/work2.webp" },
-    { title: "Trabajo 3", image: "/images/works/work3.webp" },
-    { title: "Trabajo 4", image: "/images/works/work4.webp" },
-    { title: "Trabajo 5", image: "/images/works/work5.webp" },
+    { title: "Cielorraso Industrial", image: "/images/works/work2.webp" },
+    { title: "Paneles Modulares", image: "/images/works/work3.webp" },
+    { title: "Estructura Metálica", image: "/images/works/work4.webp" },
+    { title: "Cielorraso Decorativo", image: "/images/works/work5.webp" },
   ],
   cta: { label: "Agendá tu visita técnica", href: "#contact" },
 };
@@ -91,27 +92,27 @@ export const clients = {
   },
   testimonials: [
     {
-      author: "Cliente 1",
+      author: "Martín Gutiérrez",
       quote:
         "Excelente atención y muy prolijos. La visita técnica fue clave para definir el trabajo sin sorpresas.",
     },
     {
-      author: "Cliente 2",
+      author: "Paula Ríos",
       quote:
         "Cumplieron en tiempo y forma. El cielorraso quedó perfecto y el presupuesto fue el que acordamos.",
     },
     {
-      author: "Cliente 3",
+      author: "Javier Méndez",
       quote:
         "Muy buenos materiales y terminaciones. Recomendados para obras residenciales y locales comerciales.",
     },
     {
-      author: "Cliente 4",
+      author: "Carolina Duarte",
       quote:
         "Desde el primer contacto todo claro. La instalación fue rápida y dejaron todo limpio.",
     },
     {
-      author: "Cliente 5",
+      author: "Rodrigo Álvarez",
       quote:
         "Gran equipo y atención cercana. Volvería a contratarlos para futuras reformas.",
     },
@@ -122,23 +123,41 @@ export const faqs = {
   title: "Preguntas frecuentes",
   items: [
     {
+      id: 1,
       q: "¿La visita técnica tiene costo?",
-      a: "No, la visita es totalmente gratuita y sin compromiso.",
-      id: 1
+      a: "No, la visita técnica es gratuita. Nuestro equipo se acerca al lugar, toma medidas y evalúa las condiciones para poder entregarte un presupuesto exacto sin compromiso."
     },
-    { q: "¿En qué zonas trabajan?", a: "No, la visita es totalmente gratuita y sin compromiso.", id: 2 },
-    { q: "¿Cuánto demora la instalación?", a: "No, la visita es totalmente gratuita y sin compromiso.", id: 3 },
-    { q: "¿Qué materiales utilizan?", a: "No, la visita es totalmente gratuita y sin compromiso.", id: 4 },
-  ],
+    {
+      id: 2,
+      q: "¿En qué zonas trabajan?",
+      a: "Trabajamos en toda el área metropolitana y alrededores. Para proyectos en otras ciudades podemos coordinar con anticipación el traslado de nuestro equipo."
+    },
+    {
+      id: 3,
+      q: "¿Cuánto demora la instalación?",
+      a: "Depende del tamaño del ambiente y el tipo de cielorraso elegido. En la mayoría de los casos, una instalación estándar se completa en 1 a 3 días."
+    },
+    {
+      id: 4,
+      q: "¿Qué materiales utilizan?",
+      a: "Usamos placas de yeso de primera calidad y perfilería metálica certificada. También trabajamos con aislantes térmicos y acústicos según las necesidades de cada cliente."
+    },
+    {
+      id: 5,
+      q: "¿Qué tipo de garantía ofrecen?",
+      a: "Todas nuestras instalaciones cuentan con garantía sobre la mano de obra y los materiales utilizados. En caso de cualquier inconveniente, nuestro equipo técnico responde de inmediato."
+    }
+  ]
 };
+
 
 export const contactInfo = {
   title: "Contacto",
   subtitle:
     "RESERVÁ TU VISITA TÉCNICA · COMPLETÁ EL FORMULARIO Y TE CONTACTAMOS EN MENOS DE 24HS",
   items: [
-    { type: "email", label: "Email", value: "contacto@dimitri.com" },
-    { type: "phone", label: "Teléfono", value: "+34 600 000 000" },
+    { type: "email", label: "Email", value: "contactodmt@dimitri.com" },
+    { type: "phone", label: "Teléfono", value: "+34 642 785 223" },
     { type: "address", label: "Dirección", value: "Barcelona, España" },
   ],
 };
@@ -169,9 +188,9 @@ export const footer = {
 
 export const socials = [
   { type: "instagram", label: "Instagram", href: "https://instagram.com/tu_cuenta" },
-  { type: "facebook",  label: "Facebook",  href: "https://facebook.com/tu_cuenta" },
-  { type: "linkedin",  label: "LinkedIn",  href: "https://linkedin.com/company/tu_cuenta" },
-  { type: "youtube",   label: "YouTube",   href: "https://youtube.com/@tu_cuenta" },
+  { type: "facebook", label: "Facebook", href: "https://facebook.com/tu_cuenta" },
+  { type: "linkedin", label: "LinkedIn", href: "https://linkedin.com/company/tu_cuenta" },
+  { type: "youtube", label: "YouTube", href: "https://youtube.com/@tu_cuenta" },
 ];
 
 

@@ -23,7 +23,7 @@ export default function About() {
 
         <div className="order-1 space-y-10 lg:space-y-3 h-full flex justify-between items-start flex-col">
           <div className="space-y-3">
-            <h2 className="text-4xl sm:text-5xl md:text-3xl xl:text-5xl font-bold">
+            <h2 className="text-4xl sm:text-5xl md:text-3xl xl:text-5xl font-section-title">
               {about.title}
             </h2>
             <p className="text-neutral-500 text-md xl:text-2xl">

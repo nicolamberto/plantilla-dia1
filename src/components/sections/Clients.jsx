@@ -82,9 +82,9 @@ export default function Clients() {
   };
 
   return (
-    <Section id="clients" className="bg-neutral-50">
+    <Section id="clients" className="bg-neutral-200">
       <div className="space-y-6">
-        <h2 className="text-2xl md:text-3xl font-semibold text-center">
+        <h2 className="text-2xl sm:text-5xl md:text-3xl xl:text-5xl font-section-title">
           {clients.title}
         </h2>
 
@@ -123,7 +123,7 @@ export default function Clients() {
                       height={36}
                       className="h-9 w-9 rounded-full object-cover"
                     />
-                    <h3 className="font-semibold text-neutral-900 text-xl">
+                    <h3 className="font-semibold text-neutral-900 text-md lg:text-xl">
                       {t.author}
                     </h3>
                   </div>
@@ -138,7 +138,7 @@ export default function Clients() {
                   />
                 </div>
 
-                <p className="mt-3 text-lg text-neutral-600 leading-relaxed">
+                <p className="mt-3 text-md text-neutral-600 leading-relaxed">
                   {t.quote}
                 </p>
               </article>
@@ -148,8 +148,8 @@ export default function Clients() {
           {/* Fades: solo desktop */}
           {canScroll && (
             <>
-              <div className="pointer-events-none absolute left-0 top-0 h-full w-8 bg-gradient-to-r from-neutral-50 to-transparent hidden md:block" />
-              <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-neutral-50 to-transparent hidden md:block" />
+              <div className="pointer-events-none absolute left-0 top-0 h-full w-8 bg-gradient-to-r from-neutral-200 to-transparent hidden md:block" />
+              <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-neutral-200 to-transparent hidden md:block" />
             </>
           )}
         </div>

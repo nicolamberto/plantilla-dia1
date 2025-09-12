@@ -7,7 +7,7 @@ export default function ContactInfo() {
       <div className="grid md:grid-cols-2 gap-6 items-start w-full">
         {/* Columna izquierda: datos */}
         <div className="rounded-xl bg-white/70 border border-neutral-200 p-2 md:p-6">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4">
+          <h2 className="text-3xl sm:text-5xl md:text-3xl xl:text-5xl font-section-title mb-4">
             {contactInfo.title || "Contacto"}
           </h2>
 
@@ -37,8 +37,8 @@ export default function ContactInfo() {
         {/* Columna derecha: mapa */}
         <div className="rounded-xl  border border-neutral-200 h-full overflow-hidden">
           <iframe
-            title="Mapa - Buenos Aires"
-            src="https://www.google.com/maps?q=-32.42140804384866,-63.21606088790512&z=15&output=embed"
+            title="Mapa - Barcelona"
+            src="https://www.google.com/maps?q=41.3870,2.1701&z=15&output=embed"
             className="w-full h-full"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

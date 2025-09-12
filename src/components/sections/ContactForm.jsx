@@ -47,7 +47,7 @@ export default function ContactForm() {
           >
             RESERVÁ TU VISITA TÉCNICA
           </h2>
-          <p className="mt-2 text-[12px] sm:text-xs font-semibold tracking-wide uppercase text-neutral-700">
+          <p className="mt-2 text-[12px] sm:text-xs font-semibold tracking-wide uppercase text-neutral-700 mb-6">
             Completá el formulario y te contactamos en menos de 24hs
           </p>
         </div>
